@@ -11,6 +11,11 @@ const displayTemples = (temples)=>{
     temples.forEach((temple)=>{
 
         const articleElement = document.createElement("article");
+
+        //replace above line with beneath commented one in order to apply assignment's example styling
+
+        //const articleElement = document.createElement("picture");
+
         const h3 = document.createElement("h3");
         const img = document.createElement("img");
 
@@ -23,6 +28,8 @@ const displayTemples = (temples)=>{
         articleElement.appendChild(h3);
 
         articleElement.appendChild(img);
+
+        articleElement.setAttribute("class","picture");
 
         templesElement.appendChild(articleElement);
 
