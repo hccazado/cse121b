@@ -3,10 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
     <script src="scripts/app.js" type="module"></script>
     <title>Github Users | Heitor Cazado | CSE121B</title>
 </head>
 <body>
-    
+    <div class="container">
+        <h1></h1>
+        <h2 id="users_title"></h2>
+        <div id="search">
+            <label for="user_name">Specific User</label>
+            <input type="text" id="user_name" placeholder="username or blank for all">
+            <button id="search_btn">Search</button>
+        </div>
+        <div id="users_container">
+        </div>
+    </div>
 </body>
 </html>
