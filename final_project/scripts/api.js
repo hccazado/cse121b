@@ -21,6 +21,18 @@ const apiData = {
     }
 }
 
+function compareLogin(a,b){
+    if (a.login > b.login){
+        return 1;
+    }
+    else if(a.login < b.login){
+        return -1;
+    }
+    else{
+        return 0;
+    }
+};
+
 async function fetchUsers(url, singleUser=false){
     let response = await fetch(url);
     if(response.ok){
@@ -36,6 +48,8 @@ async function fetchUsers(url, singleUser=false){
             });
         }
         else{
+            console.log(data[0]);
+            data = data.sort(compareLogin);
             data.map( (user) =>{
                 apiData.users.push({
                     id: user.id,
@@ -50,6 +64,8 @@ async function fetchUsers(url, singleUser=false){
         apiData.users = [];
     }
 }
+
+
 
 const htmlUser= (user)=>{
     let card = `

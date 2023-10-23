@@ -63,3 +63,19 @@ h2{
 }
 
 
+@media only screen and (max-width: 600px){
+    body{
+        width: 95vw;
+    }
+    #users_container{
+        grid-template-columns: 95vw;
+        margin:15px auto;
+        max-height: 75vh;
+    }
+    #search {
+        justify-self:center;
+    }
+    .user div{
+        width: 90%;
+    }
+}
