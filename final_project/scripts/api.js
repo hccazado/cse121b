@@ -39,6 +39,7 @@ async function fetchUsers(url, singleUser=false){
         apiData.users = [];
 
         let data = await response.json();
+
         if (singleUser){
             apiData.users.push({
                 id: data.id,
@@ -48,8 +49,8 @@ async function fetchUsers(url, singleUser=false){
             });
         }
         else{
-            console.log(data[0]);
             data = data.sort(compareLogin);
+
             data.map( (user) =>{
                 apiData.users.push({
                     id: user.id,
@@ -67,7 +68,7 @@ async function fetchUsers(url, singleUser=false){
 
 
 
-const htmlUser= (user)=>{
+const htmlUser = (user)=>{
     let card = `
     <a href=${user.profile} class="user" target="_blank">
         <div id=${user.id} >
